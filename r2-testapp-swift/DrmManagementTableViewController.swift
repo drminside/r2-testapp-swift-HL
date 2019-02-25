@@ -15,6 +15,10 @@ import PromiseKit
 import R2Shared
 import R2Navigator
 
+#if LCP
+import ReadiumLCP
+#endif
+
 class DrmManagementTableViewController: UITableViewController {
     @IBOutlet weak var stateLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
@@ -66,7 +70,7 @@ class DrmManagementTableViewController: UITableViewController {
                                       preferredStyle: .alert)
         let confirmButton = UIAlertAction(title: "Confirm", style: .default, handler: { (_) in
             // Make endate selection. let server decide date.
-            self.drm?.license?.renew(endDate: nil, completion: { error in
+            self.drm?.license?.loan?.renewLicense(to: nil, completion: { error in
                 if let error = error {
                     DispatchQueue.main.async {
                         self.infoAlert(title: "Error", message: error.localizedDescription)
@@ -92,7 +96,7 @@ class DrmManagementTableViewController: UITableViewController {
                                       message: "Returning the loan will prevent you from accessing the publication.",
                                       preferredStyle: .alert)
         let confirmButton = UIAlertAction(title: "Confirm", style: .destructive, handler: { (_) in
-            self.drm?.license?.`return`(completion: { error in
+            self.drm?.license?.loan?.returnLicense(completion: { error in
                 if let error = error {
                     DispatchQueue.main.async {
                         self.infoAlert(title: "Error", message: error.localizedDescription)
@@ -115,22 +119,25 @@ class DrmManagementTableViewController: UITableViewController {
     }
     
     internal func reload() {
-        guard let drm = drm else {
-            return
+        #if LCP
+        if let license = drm?.license as? LCPLicense {
+            typeLabel.text = "LCP"
+            stateLabel.text = license.status?.status.rawValue
+            providerLabel.text = license.license.provider
+            issuedLabel.text = license.license.issued.description
+            updatedLabel.text = license.license.updated.description
+            startLabel.text = license.license.rights.start?.description
+            endLabel.text = license.license.rights.end?.description
+    
+            let printQuantity = license.rights?.remainingQuantity(for: .print) ?? .unlimited
+            let copyQuantity = license.rights?.remainingQuantity(for: .print) ?? .unlimited
+            printsLeftLabel.text = printQuantity.description
+            copiesLeftLabel.text = copyQuantity.description
+            
+            renewButton.isEnabled = license.loan?.canRenewLicense ?? false
+            returnButton.isEnabled = license.loan?.canReturnLicense ?? false
         }
-        typeLabel.text = drm.brand.rawValue
-        stateLabel.text = drm.license?.currentStatus()
-        providerLabel.text = drm.license?.provider().absoluteString
-        issuedLabel.text = drm.license?.issued().description
-        updatedLabel.text = drm.license?.lastUpdate().description
-        startLabel.text = drm.license?.rightsStart()?.description
-        endLabel.text = drm.license?.rightsEnd()?.description
-        if let prints = drm.license?.rightsPrints() {
-            printsLeftLabel.text =  String(prints)
-        }
-        if let copies = drm.license?.rightsCopies() {
-            copiesLeftLabel.text = String(copies)
-        }
+        #endif
     }
     
     internal func infoAlert(title: String, message: String) {
@@ -142,23 +149,4 @@ class DrmManagementTableViewController: UITableViewController {
         present(alert, animated: true)
     }
     
-    // MARK: - UITableView
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        let count = super.numberOfSections(in: tableView)
-        if drm?.license?.rightsEnd() == nil {
-            // remove last section
-            return count - 1
-        }
-        return count
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let count = super.tableView(tableView, numberOfRowsInSection: section)
-        if (section == 1 && drm?.license?.rightsEnd() == nil) {
-            // remove last two rows
-            return count - 2
-        }
-        return count
-    }
 }

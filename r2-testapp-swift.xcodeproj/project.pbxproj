@@ -243,6 +243,10 @@
 		AE53A076208F62D200737838 /* OPDSGroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53A075208F62D200737838 /* OPDSGroupCollectionViewCell.swift */; };
 		AE955A2120EBA74B00A0D8D8 /* AssociatedColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE955A2020EBA74B00A0D8D8 /* AssociatedColors.swift */; };
 		AED681F220A32EBA0090DBCD /* OPDSPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED681F120A32EBA0090DBCD /* OPDSPlaceholderView.swift */; };
+		CA20064C2223F94400E6B3BD /* LCPLibraryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA20064B2223F94400E6B3BD /* LCPLibraryService.swift */; };
+		CA20064D2223F94400E6B3BD /* LCPLibraryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA20064B2223F94400E6B3BD /* LCPLibraryService.swift */; };
+		CA20064E2223F94400E6B3BD /* LCPLibraryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA20064B2223F94400E6B3BD /* LCPLibraryService.swift */; };
+		CA20064F2223F94400E6B3BD /* LCPLibraryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA20064B2223F94400E6B3BD /* LCPLibraryService.swift */; };
 		F30AEE7A1FC312EA0073C9FD /* DetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30AEE791FC312EA0073C9FD /* DetailsTableViewController.swift */; };
 		F30AEE7D1FC316430073C9FD /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F30AEE7C1FC316430073C9FD /* Details.storyboard */; };
 		F3120DE71FACB08E009ACFAD /* 1.epub in Resources */ = {isa = PBXBuildFile; fileRef = F32980EE1F7D467B00BDEAF4 /* 1.epub */; };
@@ -371,6 +375,7 @@
 		AE53A075208F62D200737838 /* OPDSGroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPDSGroupCollectionViewCell.swift; sourceTree = "<group>"; };
 		AE955A2020EBA74B00A0D8D8 /* AssociatedColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatedColors.swift; sourceTree = "<group>"; };
 		AED681F120A32EBA0090DBCD /* OPDSPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPDSPlaceholderView.swift; sourceTree = "<group>"; };
+		CA20064B2223F94400E6B3BD /* LCPLibraryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCPLibraryService.swift; sourceTree = "<group>"; };
 		F30AEE791FC312EA0073C9FD /* DetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableViewController.swift; sourceTree = "<group>"; };
 		F30AEE7C1FC316430073C9FD /* Details.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
 		F32980EE1F7D467B00BDEAF4 /* 1.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.epub; sourceTree = "<group>"; };
@@ -652,6 +657,7 @@
 			children = (
 				113B12BD20800FC10074A5A2 /* OPDS */,
 				F3E7D4701F4EFEC200DF166D /* LibraryViewController.swift */,
+				CA20064B2223F94400E6B3BD /* LCPLibraryService.swift */,
 				F30AEE791FC312EA0073C9FD /* DetailsTableViewController.swift */,
 				F30AEE7C1FC316430073C9FD /* Details.storyboard */,
 			);
@@ -1063,6 +1069,7 @@
 				0350FCF9211CD2CB006994C2 /* UIImageExtension.swift in Sources */,
 				0350FCFA211CD2CB006994C2 /* FontSelectionViewController.swift in Sources */,
 				0350FCFB211CD2CB006994C2 /* OutlineTableViewController.swift in Sources */,
+				CA20064D2223F94400E6B3BD /* LCPLibraryService.swift in Sources */,
 				0350FCFC211CD2CB006994C2 /* OPDSPublicationTableViewCell.swift in Sources */,
 				0350FCFD211CD2CB006994C2 /* PublicationCollectionViewCell.swift in Sources */,
 				0350FCFE211CD2CB006994C2 /* BookmarkDatabase.swift in Sources */,
@@ -1100,6 +1107,7 @@
 				0350FD4D211CD625006994C2 /* UIImageExtension.swift in Sources */,
 				0350FD4E211CD625006994C2 /* FontSelectionViewController.swift in Sources */,
 				0350FD4F211CD625006994C2 /* OutlineTableViewController.swift in Sources */,
+				CA20064E2223F94400E6B3BD /* LCPLibraryService.swift in Sources */,
 				0350FD50211CD625006994C2 /* OPDSPublicationTableViewCell.swift in Sources */,
 				0350FD51211CD625006994C2 /* PublicationCollectionViewCell.swift in Sources */,
 				0350FD52211CD625006994C2 /* BookmarkDatabase.swift in Sources */,
@@ -1137,6 +1145,7 @@
 				0350FD94211CD634006994C2 /* UIImageExtension.swift in Sources */,
 				0350FD95211CD634006994C2 /* FontSelectionViewController.swift in Sources */,
 				0350FD96211CD634006994C2 /* OutlineTableViewController.swift in Sources */,
+				CA20064F2223F94400E6B3BD /* LCPLibraryService.swift in Sources */,
 				0350FD97211CD634006994C2 /* OPDSPublicationTableViewCell.swift in Sources */,
 				0350FD98211CD634006994C2 /* PublicationCollectionViewCell.swift in Sources */,
 				0350FD99211CD634006994C2 /* BookmarkDatabase.swift in Sources */,
@@ -1174,6 +1183,7 @@
 				F3E7D47C1F4F03B800DF166D /* UIImageExtension.swift in Sources */,
 				F3BD53391F72B26700E46FFC /* FontSelectionViewController.swift in Sources */,
 				F3E7D4871F4F044100DF166D /* OutlineTableViewController.swift in Sources */,
+				CA20064C2223F94400E6B3BD /* LCPLibraryService.swift in Sources */,
 				AE48F324208E0375000B7B44 /* OPDSPublicationTableViewCell.swift in Sources */,
 				032F7E3521167E9B009E5C24 /* PublicationCollectionViewCell.swift in Sources */,
 				571585F12109E8F9008B34AD /* BookmarkDatabase.swift in Sources */,
