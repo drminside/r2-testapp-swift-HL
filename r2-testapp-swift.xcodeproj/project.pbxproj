@@ -351,6 +351,14 @@
 		CADD69DE22C3A42600A4CADF /* Publication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADD69DC22C3A42600A4CADF /* Publication.swift */; };
 		CADD69DF22C3A42600A4CADF /* Publication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADD69DC22C3A42600A4CADF /* Publication.swift */; };
 		CADD69E022C3A42700A4CADF /* Publication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADD69DC22C3A42600A4CADF /* Publication.swift */; };
+		CEDBA6282343A03700F6EC44 /* Annotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBA6272343A03700F6EC44 /* Annotate.swift */; };
+		CEDBA62A2343A05700F6EC44 /* Annotation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDBA6292343A05700F6EC44 /* Annotation.storyboard */; };
+		CEDBA62C2343A09700F6EC44 /* Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBA62B2343A09700F6EC44 /* Highlight.swift */; };
+		CEDBA62E2343A0A700F6EC44 /* HighlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBA62D2343A0A700F6EC44 /* HighlightCell.swift */; };
+		CEDBA6302343A0BF00F6EC44 /* HighlightDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBA62F2343A0BF00F6EC44 /* HighlightDatabase.swift */; };
+		CEDBA6322343A0D200F6EC44 /* HighlightDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBA6312343A0D200F6EC44 /* HighlightDataSource.swift */; };
+		CEDBA64E2343B0D400F6EC44 /* MenuItemKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDBA64D2343B0D400F6EC44 /* MenuItemKit.framework */; };
+		CEDBA6612343BB5700F6EC44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDBA6602343BB5700F6EC44 /* Assets.xcassets */; };
 		F30AEE7A1FC312EA0073C9FD /* DetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30AEE791FC312EA0073C9FD /* DetailsTableViewController.swift */; };
 		F3120DE71FACB08E009ACFAD /* 1.epub in Resources */ = {isa = PBXBuildFile; fileRef = F32980EE1F7D467B00BDEAF4 /* 1.epub */; };
 		F3120DE81FACB090009ACFAD /* 2.epub in Resources */ = {isa = PBXBuildFile; fileRef = F32980F11F7D467C00BDEAF4 /* 2.epub */; };
@@ -372,6 +380,16 @@
 		F3E7D4871F4F044100DF166D /* OutlineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E7D4841F4F044100DF166D /* OutlineTableViewController.swift */; };
 		F3E7D4881F4F044100DF166D /* UserSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E7D4851F4F044100DF166D /* UserSettingsTableViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEDBA6532343B23B00F6EC44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEDBA64F2343B23B00F6EC44 /* r2-navigator-swift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3E7D3C31F4D83B000DF166D;
+			remoteInfo = "r2-navigator-swift";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		03061924222D72AB00646F1F /* Embed Frameworks */ = {
@@ -508,6 +526,15 @@
 		CA9A40D7221C069D00531EA1 /* LCPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCPViewModel.swift; sourceTree = "<group>"; };
 		CACE84FC225640A500E19E8B /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
 		CADD69DC22C3A42600A4CADF /* Publication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publication.swift; sourceTree = "<group>"; };
+		CEDBA6272343A03700F6EC44 /* Annotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotate.swift; sourceTree = "<group>"; };
+		CEDBA6292343A05700F6EC44 /* Annotation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Annotation.storyboard; sourceTree = "<group>"; };
+		CEDBA62B2343A09700F6EC44 /* Highlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Highlight.swift; sourceTree = "<group>"; };
+		CEDBA62D2343A0A700F6EC44 /* HighlightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightCell.swift; sourceTree = "<group>"; };
+		CEDBA62F2343A0BF00F6EC44 /* HighlightDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightDatabase.swift; sourceTree = "<group>"; };
+		CEDBA6312343A0D200F6EC44 /* HighlightDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightDataSource.swift; sourceTree = "<group>"; };
+		CEDBA64D2343B0D400F6EC44 /* MenuItemKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MenuItemKit.framework; path = Carthage/Build/iOS/MenuItemKit.framework; sourceTree = "<group>"; };
+		CEDBA64F2343B23B00F6EC44 /* r2-navigator-swift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "r2-navigator-swift.xcodeproj"; path = "../r2-navigator-swift/r2-navigator-swift.xcodeproj"; sourceTree = "<group>"; };
+		CEDBA6602343BB5700F6EC44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F30AEE791FC312EA0073C9FD /* DetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableViewController.swift; sourceTree = "<group>"; };
 		F32980EE1F7D467B00BDEAF4 /* 1.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.epub; sourceTree = "<group>"; };
 		F32980EF1F7D467B00BDEAF4 /* 5.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = 5.epub; sourceTree = "<group>"; };
@@ -602,6 +629,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDBA64E2343B0D400F6EC44 /* MenuItemKit.framework in Frameworks */,
 				03BB67DB2238769D009A03C5 /* CryptoSwift.framework in Frameworks */,
 				03BB67DC2238769D009A03C5 /* Fuzi.framework in Frameworks */,
 				03BB67DD2238769D009A03C5 /* GCDWebServers.framework in Frameworks */,
@@ -739,6 +767,7 @@
 			isa = PBXGroup;
 			children = (
 				CA16A8452231224200E66255 /* ReaderViewController.swift */,
+				CEDBA6262343A02400F6EC44 /* Highlight */,
 				CA29B71C222001420037534C /* DRM */,
 				CA29B719222001030037534C /* Outline */,
 				571585F32109E903008B34AD /* Bookmark */,
@@ -826,6 +855,27 @@
 			path = LCP;
 			sourceTree = "<group>";
 		};
+		CEDBA6262343A02400F6EC44 /* Highlight */ = {
+			isa = PBXGroup;
+			children = (
+				CEDBA6272343A03700F6EC44 /* Annotate.swift */,
+				CEDBA6292343A05700F6EC44 /* Annotation.storyboard */,
+				CEDBA62B2343A09700F6EC44 /* Highlight.swift */,
+				CEDBA62D2343A0A700F6EC44 /* HighlightCell.swift */,
+				CEDBA62F2343A0BF00F6EC44 /* HighlightDatabase.swift */,
+				CEDBA6312343A0D200F6EC44 /* HighlightDataSource.swift */,
+			);
+			name = Highlight;
+			sourceTree = "<group>";
+		};
+		CEDBA6502343B23B00F6EC44 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEDBA6542343B23B00F6EC44 /* R2Navigator.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		F32980ED1F7D464900BDEAF4 /* Samples */ = {
 			isa = PBXGroup;
 			children = (
@@ -843,6 +893,8 @@
 		F3E7D42F1F4EF6D400DF166D = {
 			isa = PBXGroup;
 			children = (
+				CEDBA6602343BB5700F6EC44 /* Assets.xcassets */,
+				CEDBA64F2343B23B00F6EC44 /* r2-navigator-swift.xcodeproj */,
 				03BB67D722387668009A03C5 /* R2Shared.framework */,
 				03BB67D32238765C009A03C5 /* R2Streamer.framework */,
 				03BB67CE2238765C009A03C5 /* R2Navigator.framework */,
@@ -911,6 +963,7 @@
 		F3E7D4691F4EFE8700DF166D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEDBA64D2343B0D400F6EC44 /* MenuItemKit.framework */,
 				03BB67C32238763E009A03C5 /* R2Navigator.framework */,
 				03BB67C52238763E009A03C5 /* R2Shared.framework */,
 				03BB67C72238763E009A03C5 /* R2Streamer.framework */,
@@ -942,6 +995,7 @@
 				0350FD03211CD2CB006994C2 /* Frameworks */,
 				0350FD14211CD2CB006994C2 /* Resources */,
 				0350FD36211CD2E0006994C2 /* Embed Frameworks */,
+				661D4A15CC244FC6188CB221 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -960,6 +1014,7 @@
 				0350FD57211CD625006994C2 /* Frameworks */,
 				0350FD68211CD625006994C2 /* Resources */,
 				03E1FD3E211CE50500D4A320 /* Embed Frameworks */,
+				97CFEC0522CEBEBF26577EB2 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -979,6 +1034,7 @@
 				CA822CA8221C5737005800D1 /* Resources */,
 				03520722222D5B550000F0A4 /* ShellScript */,
 				03061924222D72AB00646F1F /* Embed Frameworks */,
+				FD8535B01FF81716B2B34497 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -996,6 +1052,7 @@
 				F3E7D4341F4EF6D400DF166D /* Sources */,
 				F3E7D4351F4EF6D400DF166D /* Frameworks */,
 				F3E7D4361F4EF6D400DF166D /* Resources */,
+				DE7AE59B9157827674F79F36 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -1053,6 +1110,12 @@
 			mainGroup = F3E7D42F1F4EF6D400DF166D;
 			productRefGroup = F3E7D4391F4EF6D400DF166D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CEDBA6502343B23B00F6EC44 /* Products */;
+					ProjectRef = CEDBA64F2343B23B00F6EC44 /* r2-navigator-swift.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F3E7D4371F4EF6D400DF166D /* r2-testapp-swift (carthage) */,
@@ -1062,6 +1125,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CEDBA6542343B23B00F6EC44 /* R2Navigator.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = R2Navigator.framework;
+			remoteRef = CEDBA6532343B23B00F6EC44 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0350FD14211CD2CB006994C2 /* Resources */ = {
@@ -1150,6 +1223,7 @@
 				F3120DE81FACB090009ACFAD /* 2.epub in Resources */,
 				F3120DE91FACB092009ACFAD /* 3.epub in Resources */,
 				03079E7D211CF865002E9B9B /* 1.cbz in Resources */,
+				CEDBA6612343BB5700F6EC44 /* Assets.xcassets in Resources */,
 				F3120DEA1FACB094009ACFAD /* 4.epub in Resources */,
 				CA6BA38722B0FF2A00A59462 /* Outline.storyboard in Resources */,
 				CA6BA38122B0FF2500A59462 /* DRM.storyboard in Resources */,
@@ -1165,6 +1239,7 @@
 				CA6BA36E22B0F05000A59462 /* Localizable.strings in Resources */,
 				F3E7D4431F4EF6D400DF166D /* Assets.xcassets in Resources */,
 				CA6BA38D22B0FF3700A59462 /* UserSettings.storyboard in Resources */,
+				CEDBA62A2343A05700F6EC44 /* Annotation.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1187,6 +1262,86 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage outdated --xcode-warnings\n";
+		};
+		661D4A15CC244FC6188CB221 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/Carthage/xcfilelists/r2-testapp-swift (submodules)-inputPaths.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = Carthage;
+			outputFileListPaths = (
+				"$(SRCROOT)/Carthage/xcfilelists/r2-testapp-swift (submodules)-outputPaths.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		97CFEC0522CEBEBF26577EB2 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/Carthage/xcfilelists/r2-testapp-swift (carthage with lcp)-inputPaths.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = Carthage;
+			outputFileListPaths = (
+				"$(SRCROOT)/Carthage/xcfilelists/r2-testapp-swift (carthage with lcp)-outputPaths.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		DE7AE59B9157827674F79F36 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/Carthage/xcfilelists/r2-testapp-swift (carthage)-inputPaths.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = Carthage;
+			outputFileListPaths = (
+				"$(SRCROOT)/Carthage/xcfilelists/r2-testapp-swift (carthage)-outputPaths.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		FD8535B01FF81716B2B34497 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/Carthage/xcfilelists/r2-testapp-swift (submodules with lcp)-inputPaths.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = Carthage;
+			outputFileListPaths = (
+				"$(SRCROOT)/Carthage/xcfilelists/r2-testapp-swift (submodules with lcp)-outputPaths.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1389,6 +1544,7 @@
 				CA29B71F222001620037534C /* ReaderModule.swift in Sources */,
 				CA415F12221D6CE6003A0F7F /* AppModule.swift in Sources */,
 				113B12DD20800FD60074A5A2 /* OPDSPublicationInfoViewController.swift in Sources */,
+				CEDBA6282343A03700F6EC44 /* Annotate.swift in Sources */,
 				F3E7D4801F4F03F500DF166D /* CBZViewController.swift in Sources */,
 				CA29B73322200EAA0037534C /* UIViewController.swift in Sources */,
 				AE53A076208F62D200737838 /* OPDSGroupCollectionViewCell.swift in Sources */,
@@ -1414,6 +1570,7 @@
 				CA0B3AC7222EE726006D9363 /* PDFModule.swift in Sources */,
 				CA7F5A502204AF2900B88141 /* Result.swift in Sources */,
 				0380490B21166627009F48BD /* Toast.swift in Sources */,
+				CEDBA6322343A0D200F6EC44 /* HighlightDataSource.swift in Sources */,
 				CA7F5A4D2204A42100B88141 /* DRMLibraryService.swift in Sources */,
 				F3E7D4881F4F044100DF166D /* UserSettingsTableViewController.swift in Sources */,
 				CA2AE316221C11F5008BD18F /* LCPLibraryService.swift in Sources */,
@@ -1433,10 +1590,13 @@
 				CA29B6F5221FF43E0037534C /* LibraryFactory.swift in Sources */,
 				CA29B705221FF8F30037534C /* OPDSFactory.swift in Sources */,
 				032F7E3521167E9B009E5C24 /* PublicationCollectionViewCell.swift in Sources */,
+				CEDBA62E2343A0A700F6EC44 /* HighlightCell.swift in Sources */,
+				CEDBA6302343A0BF00F6EC44 /* HighlightDatabase.swift in Sources */,
 				571585F12109E8F9008B34AD /* BookmarkDatabase.swift in Sources */,
 				F3DCFFBE1F7CE0610056BA37 /* UserSettingsNavigationController.swift in Sources */,
 				F30AEE7A1FC312EA0073C9FD /* DetailsTableViewController.swift in Sources */,
 				571585F02109E8F9008B34AD /* BookmarkCell.swift in Sources */,
+				CEDBA62C2343A09700F6EC44 /* Highlight.swift in Sources */,
 				CA6BA3C022B1106E00A59462 /* LibraryError.swift in Sources */,
 				AE37DE432093291600079AA2 /* AboutTableViewController.swift in Sources */,
 				03AE308F2259F3E400AA4C7C /* BooksDatabase.swift in Sources */,

@@ -1,6 +1,6 @@
-github "readium/r2-shared-swift" == 1.3.3
+github "drminside/r2-shared-swift-hl" "4c66d6d"
 github "readium/r2-streamer-swift" == 1.1.5
-github "readium/r2-navigator-swift" == 1.1.3
+github "drminside/r2-navigator-swift-hl" == 1.1.3
 github "readium/readium-opds-swift" == 1.1.2
 github "weichsel/ZIPFoundation" == 0.9.8
 github "onevcat/Kingfisher" == 4.10.1
@@ -10,3 +10,4 @@ github "swisspol/GCDWebServer" == 3.5.2
 github "krzyzanowskim/CryptoSwift" == 0.15.0
 github "edrlab/Fuzi" == 2.2.2
 github "dexman/Minizip"
+github "cxa/MenuItemKit" "3.0.0"

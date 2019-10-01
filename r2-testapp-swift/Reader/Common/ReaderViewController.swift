@@ -27,9 +27,18 @@ class ReaderViewController: UIViewController, Loggable {
     let drm: DRM?
 
     lazy var bookmarksDataSource: BookmarkDataSource? = BookmarkDataSource(publicationID: publication.metadata.identifier ?? "")
+    lazy var highlightsDataSource: HighlightDataSource? = HighlightDataSource(publicationID: publication.metadata.identifier ?? "")
     
     private(set) var stackView: UIStackView!
     private lazy var positionLabel = UILabel()
+    
+    static func initialLocation(for publication: Publication) -> Locator? {
+        guard let publicationID = publication.metadata.identifier,
+            let locatorJSON = UserDefaults.standard.string(forKey: "\(publicationID)-locator") else {
+                return nil
+        }
+        return (try? Locator(jsonString: locatorJSON)) as? Locator
+    }
     
     init(navigator: UIViewController & Navigator, publication: Publication, book: Book, drm: DRM?) {
         self.navigator = navigator
@@ -39,6 +48,18 @@ class ReaderViewController: UIViewController, Loggable {
         
         super.init(nibName: nil, bundle: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshed), name: NSNotification.Name(rawValue: "refreshed"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(highlightActivated), name: NSNotification.Name(rawValue: "highlightActivated"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(annotationActivated), name: NSNotification.Name(rawValue: "annotationActivated"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(changeAnnotationActivated), name: NSNotification.Name(rawValue: "changeAnnotationActivated"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(changeColorActivated), name: NSNotification.Name(rawValue: "changeColorActivated"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(defaultMenuActivated), name: NSNotification.Name(rawValue: "defaultMenu"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(deleteHighlightActivated), name: NSNotification.Name(rawValue: "deleteHighlightActivated"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(annotated), name: NSNotification.Name(rawValue: "annotated"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(pageLoaded), name: NSNotification.Name(rawValue: "pageLoaded"), object: nil)
+
         NotificationCenter.default.addObserver(self, selector: #selector(voiceOverStatusDidChange), name: Notification.Name(UIAccessibilityVoiceOverStatusChanged), object: nil)
     }
 
@@ -145,6 +166,14 @@ class ReaderViewController: UIViewController, Loggable {
         fatalError("Not implemented")
     }
     
+    var currentSelection: HighlightData? {
+        //fatalError("Not implemented")
+        var highlight:HighlightData?
+        
+        return highlight
+        
+        
+    }
 
     // MARK: - Outlines
 
@@ -164,6 +193,44 @@ class ReaderViewController: UIViewController, Loggable {
             return
         }
         toast(NSLocalizedString("reader_bookmark_success_message", comment: "Success message when adding a bookmark"), on: view, duration: 1)
+    }
+    
+    // MARK: - Highlights
+    
+    @objc func changeColorActivated(_ notification: NSNotification) {
+        print("Not implemented")
+    }
+    
+    @objc func refreshed(_notification: NSNotification) {
+        return
+    }
+    
+    @objc func highlightActivated(_ notification: NSNotification) {
+        print("Not implemented")
+    }
+    
+    @objc func pageLoaded(_ notification: NSNotification) {
+        print("Not implemented")
+    }
+    
+    @objc func annotationActivated(_ notification: NSNotification) {
+        print("Not implemented")
+    }
+    
+    @objc func changeAnnotationActivated(_ notification: NSNotification) {
+        print("Not implemented")
+    }
+    
+    @objc func annotated(_ notification: NSNotification) {
+        print("Not implemented")
+    }
+    
+    @objc func deleteHighlightActivated(_ notification: NSNotification) {
+        print("Not implemented")
+    }
+    
+    @objc func defaultMenuActivated(_ notification: NSNotification) {
+        print("Not implemented")
     }
     
     

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Annotation View Controller-->
+        <scene sceneID="8zb-tZ-fTb">
+            <objects>
+                <viewController storyboardIdentifier="annotationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XnU-SX-oaS" customClass="AnnotationViewController" customModule="r2_testapp_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mAA-1x-fWZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BCj-dC-eLq" userLabel="annotation">
+                                <rect key="frame" x="40" y="205" width="354" height="676"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNz-6Y-map">
+                                <rect key="frame" x="323" y="57" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="OnDone:" destination="XnU-SX-oaS" eventType="touchUpInside" id="ghx-8Z-L1d"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i0v-ti-ALW">
+                                <rect key="frame" x="20" y="118" width="374" height="65"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HSm-cz-cC5">
+                                        <rect key="frame" x="0.0" y="0.0" width="5" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.67450980392156867" green="0.84705882352941175" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LN3-FU-SfO">
+                                        <rect key="frame" x="20" y="0.0" width="240" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7vc-Ef-IRe" firstAttribute="trailing" secondItem="BCj-dC-eLq" secondAttribute="trailing" constant="20" id="4Xa-Id-zH9"/>
+                            <constraint firstItem="i0v-ti-ALW" firstAttribute="top" secondItem="oNz-6Y-map" secondAttribute="bottom" constant="31" id="4rV-TQ-War"/>
+                            <constraint firstItem="7vc-Ef-IRe" firstAttribute="trailing" secondItem="oNz-6Y-map" secondAttribute="trailing" constant="54" id="77v-Ng-KoY"/>
+                            <constraint firstItem="BCj-dC-eLq" firstAttribute="top" secondItem="mAA-1x-fWZ" secondAttribute="top" constant="205" id="FnF-He-aHa"/>
+                            <constraint firstItem="oNz-6Y-map" firstAttribute="top" secondItem="7vc-Ef-IRe" secondAttribute="top" constant="13" id="GOn-qC-oex"/>
+                            <constraint firstItem="i0v-ti-ALW" firstAttribute="leading" secondItem="7vc-Ef-IRe" secondAttribute="leading" constant="20" id="WUd-i9-pYd"/>
+                            <constraint firstItem="oNz-6Y-map" firstAttribute="leading" secondItem="7vc-Ef-IRe" secondAttribute="leading" constant="323" id="ctX-Gs-pJF"/>
+                            <constraint firstItem="7vc-Ef-IRe" firstAttribute="trailing" secondItem="i0v-ti-ALW" secondAttribute="trailing" constant="20" id="msb-pV-ycq"/>
+                            <constraint firstAttribute="bottom" secondItem="BCj-dC-eLq" secondAttribute="bottom" constant="15" id="sNW-bF-5vv"/>
+                            <constraint firstItem="BCj-dC-eLq" firstAttribute="leading" secondItem="7vc-Ef-IRe" secondAttribute="leading" constant="40" id="xiG-ci-LRm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7vc-Ef-IRe"/>
+                    </view>
+                    <connections>
+                        <outlet property="annotation" destination="BCj-dC-eLq" id="ClT-0X-3ed"/>
+                        <outlet property="selectText" destination="LN3-FU-SfO" id="Mtg-x8-MSm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jqt-FK-Sai" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="80.357142857142847"/>
+        </scene>
+    </scenes>
+</document>

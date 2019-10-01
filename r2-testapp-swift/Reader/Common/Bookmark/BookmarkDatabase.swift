@@ -42,7 +42,7 @@ final class BookmarkDatabase {
 
 class BookmarksTable {
   
-    let tableName = Table("BOOKMARKS")
+    var tableName = Table("BOOKMARKS")
     
     let bookmarkID = Expression<Int64>("id")
     let publicationID = Expression<String>("publicationID")

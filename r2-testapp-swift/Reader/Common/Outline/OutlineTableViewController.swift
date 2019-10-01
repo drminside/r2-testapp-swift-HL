@@ -21,6 +21,8 @@ protocol OutlineTableViewControllerFactory {
 protocol OutlineTableViewControllerDelegate: AnyObject {
     
     var bookmarksDataSource: BookmarkDataSource? { get }
+    var highlightsDataSource: HighlightDataSource? { get }
+
     func outline(_ outlineTableViewController: OutlineTableViewController, goTo location: Locator)
 
 }
@@ -31,6 +33,7 @@ final class OutlineTableViewController: UITableViewController {
     
     let kBookmarkCell = "kBookmarkCell"
     let kContentCell = "kContentCell"
+    let kHighlightCell = "kHighlightCell"
     
     var publication: Publication!
   
@@ -40,6 +43,10 @@ final class OutlineTableViewController: UITableViewController {
     var bookmarksDataSource: BookmarkDataSource? {
         return delegate?.bookmarksDataSource
     }
+    
+    var highlightsDataSource: HighlightDataSource? {
+        return delegate?.highlightsDataSource
+    }
 
     @IBOutlet weak var segments: UISegmentedControl!
     @IBAction func segmentChanged(_ sender: Any) {
@@ -47,7 +54,7 @@ final class OutlineTableViewController: UITableViewController {
     }
 
     private enum Section: Int {
-        case tableOfContents = 0, bookmarks, pageList, landmarks
+        case tableOfContents = 0, bookmarks,highlights
     }
     
     private var section: Section {
@@ -72,8 +79,7 @@ final class OutlineTableViewController: UITableViewController {
         
         outlines = [
             .tableOfContents: flatten(publication.tableOfContents),
-            .landmarks: flatten(publication.landmarks),
-            .pageList: flatten(publication.pageList)
+            .highlights: flatten(publication.landmarks)
         ]
     }
     
@@ -84,6 +90,11 @@ final class OutlineTableViewController: UITableViewController {
                 return nil
             }
             return bookmark.locator
+        case .highlights:
+            guard let highlight = highlightsDataSource?.highlight(at: indexPath.row) else {
+                return nil
+            }
+            return highlight.locator
 
         default:
             guard let outline = outlines[section],
@@ -140,7 +151,20 @@ final class OutlineTableViewController: UITableViewController {
                 }()
             }
             return cell
+        case .highlights:
+            let cell: HighlightCell = {
+                if let cell = tableView.dequeueReusableCell(withIdentifier: kHighlightCell) as? HighlightCell {
+                    return cell
+                }
+                return HighlightCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: kHighlightCell)
+            } ()
             
+            if let highlight = highlightsDataSource?.highlight(at: indexPath.item) {
+                cell.textLabel?.text = highlight.locator.title
+                cell.formattedDate = highlight.creationDate
+                cell.detailTextLabel?.text = highlight.annotation
+            }
+            return cell
         default:
             guard let outline = outlines[section] else {
                 return UITableViewCell(style: .default, reuseIdentifier: nil)
@@ -157,6 +181,8 @@ final class OutlineTableViewController: UITableViewController {
         switch section {
         case .bookmarks:
             return bookmarksDataSource?.count ?? 0
+        case .highlights:
+            return highlightsDataSource?.count ?? 0
         default:
             return outlines[section]?.count ?? 0
         }
@@ -172,6 +198,8 @@ final class OutlineTableViewController: UITableViewController {
         switch section {
         case .bookmarks:
             return true
+        case .highlights:
+            return true
         default:
             return false
         }
@@ -182,6 +210,12 @@ final class OutlineTableViewController: UITableViewController {
         case .bookmarks:
             if editingStyle == .delete {
                 if (self.bookmarksDataSource?.removeBookmark(index: indexPath.item) ?? false) {
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                }
+            }
+        case .highlights:
+            if editingStyle == .delete {
+                if (self.highlightsDataSource?.removeHighlight(index: indexPath.item) ?? false) {
                     tableView.deleteRows(at: [indexPath], with: .fade)
                 }
             }
