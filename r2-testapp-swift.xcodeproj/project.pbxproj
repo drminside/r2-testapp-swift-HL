@@ -382,6 +382,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1F285D5D235D5E2000449194 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F285D57235D5E2000449194 /* r2-shared-swift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3E7D3F41F4EBE2100DF166D;
+			remoteInfo = "r2-shared-swift";
+		};
+		1F285D5F235D5E2000449194 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F285D57235D5E2000449194 /* r2-shared-swift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CA6161EA21FB257700D2CFE3;
+			remoteInfo = "r2-shared-swiftTests";
+		};
 		CEDBA6532343B23B00F6EC44 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CEDBA64F2343B23B00F6EC44 /* r2-navigator-swift.xcodeproj */;
@@ -477,6 +491,7 @@
 		113B12C120800FD50074A5A2 /* OPDSCatalogSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPDSCatalogSelectorViewController.swift; sourceTree = "<group>"; };
 		113B12C920800FD50074A5A2 /* OPDSFacetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPDSFacetViewController.swift; sourceTree = "<group>"; };
 		113B12CC20800FD60074A5A2 /* OPDSPublicationInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPDSPublicationInfoViewController.swift; sourceTree = "<group>"; };
+		1F285D57235D5E2000449194 /* r2-shared-swift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "r2-shared-swift.xcodeproj"; path = "../r2-shared-swift/r2-shared-swift.xcodeproj"; sourceTree = "<group>"; };
 		571585ED2109E8F8008B34AD /* BookmarkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkCell.swift; sourceTree = "<group>"; };
 		571585EE2109E8F8008B34AD /* BookmarkDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkDatabase.swift; sourceTree = "<group>"; };
 		571585EF2109E8F8008B34AD /* BookmarkDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkDataSource.swift; sourceTree = "<group>"; };
@@ -654,6 +669,15 @@
 				03AE308E2259F3E400AA4C7C /* BooksDatabase.swift */,
 			);
 			path = DB;
+			sourceTree = "<group>";
+		};
+		1F285D58235D5E2000449194 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F285D5E235D5E2000449194 /* R2Shared.framework */,
+				1F285D60235D5E2000449194 /* r2-shared-swiftTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		571585F32109E903008B34AD /* Bookmark */ = {
@@ -893,6 +917,7 @@
 		F3E7D42F1F4EF6D400DF166D = {
 			isa = PBXGroup;
 			children = (
+				1F285D57235D5E2000449194 /* r2-shared-swift.xcodeproj */,
 				CEDBA6602343BB5700F6EC44 /* Assets.xcassets */,
 				CEDBA64F2343B23B00F6EC44 /* r2-navigator-swift.xcodeproj */,
 				03BB67D722387668009A03C5 /* R2Shared.framework */,
@@ -1088,7 +1113,6 @@
 					};
 					F3E7D4371F4EF6D400DF166D = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 327YA3JNGT;
 						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -1115,6 +1139,10 @@
 					ProductGroup = CEDBA6502343B23B00F6EC44 /* Products */;
 					ProjectRef = CEDBA64F2343B23B00F6EC44 /* r2-navigator-swift.xcodeproj */;
 				},
+				{
+					ProductGroup = 1F285D58235D5E2000449194 /* Products */;
+					ProjectRef = 1F285D57235D5E2000449194 /* r2-shared-swift.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -1127,6 +1155,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		1F285D5E235D5E2000449194 /* R2Shared.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = R2Shared.framework;
+			remoteRef = 1F285D5D235D5E2000449194 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1F285D60235D5E2000449194 /* r2-shared-swiftTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "r2-shared-swiftTests.xctest";
+			remoteRef = 1F285D5F235D5E2000449194 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		CEDBA6542343B23B00F6EC44 /* R2Navigator.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -2038,7 +2080,7 @@
 				CODE_SIGN_ENTITLEMENTS = "r2-testapp-swift/r2-testapp-swift.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 327YA3JNGT;
+				DEVELOPMENT_TEAM = G7X5YXST42;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -2054,7 +2096,7 @@
 				);
 				OTHER_LDFLAGS = "-lxml2";
 				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = org.readium.r2reader;
+				PRODUCT_BUNDLE_IDENTIFIER = com.drminside.r2reader;
 				PRODUCT_NAME = "r2-testapp-swift";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2071,7 +2113,7 @@
 				CODE_SIGN_ENTITLEMENTS = "r2-testapp-swift/r2-testapp-swift.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 327YA3JNGT;
+				DEVELOPMENT_TEAM = G7X5YXST42;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -2087,7 +2129,7 @@
 				);
 				OTHER_LDFLAGS = "-lxml2";
 				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = org.readium.r2reader;
+				PRODUCT_BUNDLE_IDENTIFIER = com.drminside.r2reader;
 				PRODUCT_NAME = "r2-testapp-swift";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
