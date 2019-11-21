@@ -1,6 +1,6 @@
 github "cxa/MenuItemKit" "3.0.0"
 github "dexman/Minizip" "1.4.0"
-github "drminside/r2-navigator-swift-hl" "4fdbf75"
+github "drminside/r2-navigator-swift-hl" "dd48ed599ef5d1f0801443ca9deb3031ae3397e6"
 github "drminside/r2-shared-swift-hl" "4c66d6d2708acb076e41afae9e7d03cdda852f9a"
 github "edrlab/Fuzi" "2.2.2"
 github "jdg/MBProgressHUD" "1.1.0"

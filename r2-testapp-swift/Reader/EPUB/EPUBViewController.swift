@@ -358,9 +358,8 @@ class EPUBViewController: ReaderViewController {
         let memuNotification = Notification.Name(rawValue: "defaultMenu")
         NotificationCenter.default.post(name: memuNotification, object: self, userInfo:nil)
         let highlight = UIMenuItem(title: "Highlight", action: #selector(highlightMenuTapped))
-        let memo = UIMenuItem(title: "memo", image: UIImage(named: "Pen")) {_ in
-            self.createAnnotation()
-        }
+
+        let memo = UIMenuItem(title: "Memo", action: #selector(annotationMenuTapped))
         UIMenuController.shared.menuItems = [ highlight, memo ]
         UIMenuController.shared.update()
     }
@@ -511,6 +510,18 @@ class EPUBViewController: ReaderViewController {
         ]
         
         changeColor(highlight, color)
+    }
+    
+    @objc func annotationMenuTapped() {
+        let annotationStoryboard = UIStoryboard(name: "Annotation", bundle: nil)
+    
+        let annotationView =  annotationStoryboard.instantiateViewController(withIdentifier: "annotationViewController") as! AnnotationViewController
+    
+        epubNavigator.currentSelection { locator in
+            annotationView.selectionText = locator!.text.highlight!
+            self.present(annotationView, animated: true, completion: nil)
+        }
+        setSelectionMenu()
     }
     
     func createAnnotation(_ highlight: Highlight? = nil) {
