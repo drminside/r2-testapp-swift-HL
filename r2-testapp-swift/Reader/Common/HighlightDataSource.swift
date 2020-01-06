@@ -30,8 +30,6 @@ class HighlightDataSource: Loggable {
     
     func reloadHighlights() {
         if let list = try? HighlightDatabase.shared.highlights.highlightList(for: self.publicationID) {
-            print("Highlight Mark data")
-            print(list)
             self.highlights = list ?? [HighlightData]()
             self.highlights.sort { (b1, b2) -> Bool in
                 let locations1 = b1.locator.locations

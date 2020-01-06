@@ -334,7 +334,7 @@ class EPUBViewController: ReaderViewController {
                         return
                     }
                     
-                    self.epubNavigator.showAnnotation(id)
+                    self.epubNavigator.showAnnotation(result.id)
                 }
             }
         }
@@ -396,7 +396,6 @@ class EPUBViewController: ReaderViewController {
         
         UIMenuController.shared.update()
         UIMenuController.shared.setMenuVisible(true, animated: true)
-        
     }
     
     func createHighlight(_ highlight: Highlight? = nil, _ colorInfo:NSDictionary) {
@@ -588,6 +587,7 @@ class EPUBViewController: ReaderViewController {
             )
         }
         //navigator.
+        setSelectionMenu()
         return
         
         
