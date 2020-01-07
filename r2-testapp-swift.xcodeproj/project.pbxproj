@@ -137,7 +137,6 @@
 		03BB67D922387668009A03C5 /* R2Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03BB67D722387668009A03C5 /* R2Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		03BB67DB2238769D009A03C5 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0306192E222D936100646F1F /* CryptoSwift.framework */; };
 		03BB67DC2238769D009A03C5 /* Fuzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03061933222D936100646F1F /* Fuzi.framework */; };
-		03BB67DD2238769D009A03C5 /* GCDWebServers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03061930222D936100646F1F /* GCDWebServers.framework */; };
 		03BB67DE2238769D009A03C5 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03520739222D68CC0000F0A4 /* Kingfisher.framework */; };
 		03BB67DF2238769D009A03C5 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0352073B222D68EA0000F0A4 /* MBProgressHUD.framework */; };
 		03BB67E02238769D009A03C5 /* Minizip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03061931222D936100646F1F /* Minizip.framework */; };
@@ -351,6 +350,8 @@
 		CADD69DE22C3A42600A4CADF /* Publication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADD69DC22C3A42600A4CADF /* Publication.swift */; };
 		CADD69DF22C3A42600A4CADF /* Publication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADD69DC22C3A42600A4CADF /* Publication.swift */; };
 		CADD69E022C3A42700A4CADF /* Publication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADD69DC22C3A42600A4CADF /* Publication.swift */; };
+		CE96259B23C475440098F5E9 /* GCDWebServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE96258A23C472AF0098F5E9 /* GCDWebServer.framework */; };
+		CE96259C23C475440098F5E9 /* GCDWebServer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE96258A23C472AF0098F5E9 /* GCDWebServer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEDBA6282343A03700F6EC44 /* Annotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBA6272343A03700F6EC44 /* Annotate.swift */; };
 		CEDBA62A2343A05700F6EC44 /* Annotation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDBA6292343A05700F6EC44 /* Annotation.storyboard */; };
 		CEDBA62C2343A09700F6EC44 /* Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBA62B2343A09700F6EC44 /* Highlight.swift */; };
@@ -395,6 +396,20 @@
 			proxyType = 2;
 			remoteGlobalIDString = CA6161EA21FB257700D2CFE3;
 			remoteInfo = "r2-shared-swiftTests";
+		};
+		CE96259723C473530098F5E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE96259223C473530098F5E9 /* GCDWebServer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E2DDD1F61BE69EE4002CE867;
+			remoteInfo = "GCDWebServer Sample (iOS)";
+		};
+		CE96259923C473530098F5E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE96259223C473530098F5E9 /* GCDWebServer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CEE28CEF1AE0051F00F4023C;
+			remoteInfo = "GCDWebServer (iOS)";
 		};
 		CEDBA6532343B23B00F6EC44 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -444,6 +459,17 @@
 			files = (
 				03BB67BA223874FA009A03C5 /* ReadiumLCP.framework in Embed Frameworks */,
 				03BB67B7223874FA009A03C5 /* R2LCPClient.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE96259D23C475440098F5E9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CE96259C23C475440098F5E9 /* GCDWebServer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,6 +567,9 @@
 		CA9A40D7221C069D00531EA1 /* LCPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCPViewModel.swift; sourceTree = "<group>"; };
 		CACE84FC225640A500E19E8B /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
 		CADD69DC22C3A42600A4CADF /* Publication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publication.swift; sourceTree = "<group>"; };
+		CE96258A23C472AF0098F5E9 /* GCDWebServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GCDWebServer.framework; path = Carthage/Build/iOS/GCDWebServer.framework; sourceTree = "<group>"; };
+		CE96258E23C472D70098F5E9 /* GCDWebServer */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GCDWebServer; path = Carthage/Checkouts/GCDWebServer; sourceTree = "<group>"; };
+		CE96259223C473530098F5E9 /* GCDWebServer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GCDWebServer.xcodeproj; path = Carthage/Checkouts/GCDWebServer/GCDWebServer.xcodeproj; sourceTree = "<group>"; };
 		CEDBA6272343A03700F6EC44 /* Annotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotate.swift; sourceTree = "<group>"; };
 		CEDBA6292343A05700F6EC44 /* Annotation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Annotation.storyboard; sourceTree = "<group>"; };
 		CEDBA62B2343A09700F6EC44 /* Highlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Highlight.swift; sourceTree = "<group>"; };
@@ -647,10 +676,10 @@
 				CEDBA64E2343B0D400F6EC44 /* MenuItemKit.framework in Frameworks */,
 				03BB67DB2238769D009A03C5 /* CryptoSwift.framework in Frameworks */,
 				03BB67DC2238769D009A03C5 /* Fuzi.framework in Frameworks */,
-				03BB67DD2238769D009A03C5 /* GCDWebServers.framework in Frameworks */,
 				03BB67DE2238769D009A03C5 /* Kingfisher.framework in Frameworks */,
 				03BB67DF2238769D009A03C5 /* MBProgressHUD.framework in Frameworks */,
 				03BB67E02238769D009A03C5 /* Minizip.framework in Frameworks */,
+				CE96259B23C475440098F5E9 /* GCDWebServer.framework in Frameworks */,
 				03BB67E12238769D009A03C5 /* R2Navigator.framework in Frameworks */,
 				03BB67E22238769D009A03C5 /* R2Shared.framework in Frameworks */,
 				03BB67E32238769D009A03C5 /* R2Streamer.framework in Frameworks */,
@@ -879,6 +908,15 @@
 			path = LCP;
 			sourceTree = "<group>";
 		};
+		CE96259323C473530098F5E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE96259823C473530098F5E9 /* GCDWebServer Sample.app */,
+				CE96259A23C473530098F5E9 /* GCDWebServer.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		CEDBA6262343A02400F6EC44 /* Highlight */ = {
 			isa = PBXGroup;
 			children = (
@@ -988,6 +1026,9 @@
 		F3E7D4691F4EFE8700DF166D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE96259223C473530098F5E9 /* GCDWebServer.xcodeproj */,
+				CE96258E23C472D70098F5E9 /* GCDWebServer */,
+				CE96258A23C472AF0098F5E9 /* GCDWebServer.framework */,
 				CEDBA64D2343B0D400F6EC44 /* MenuItemKit.framework */,
 				03BB67C32238763E009A03C5 /* R2Navigator.framework */,
 				03BB67C52238763E009A03C5 /* R2Shared.framework */,
@@ -1078,6 +1119,7 @@
 				F3E7D4351F4EF6D400DF166D /* Frameworks */,
 				F3E7D4361F4EF6D400DF166D /* Resources */,
 				DE7AE59B9157827674F79F36 /* Carthage */,
+				CE96259D23C475440098F5E9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1136,6 +1178,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = CE96259323C473530098F5E9 /* Products */;
+					ProjectRef = CE96259223C473530098F5E9 /* GCDWebServer.xcodeproj */;
+				},
+				{
 					ProductGroup = CEDBA6502343B23B00F6EC44 /* Products */;
 					ProjectRef = CEDBA64F2343B23B00F6EC44 /* r2-navigator-swift.xcodeproj */;
 				},
@@ -1167,6 +1213,20 @@
 			fileType = wrapper.cfbundle;
 			path = "r2-shared-swiftTests.xctest";
 			remoteRef = 1F285D5F235D5E2000449194 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE96259823C473530098F5E9 /* GCDWebServer Sample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "GCDWebServer Sample.app";
+			remoteRef = CE96259723C473530098F5E9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE96259A23C473530098F5E9 /* GCDWebServer.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GCDWebServer.framework;
+			remoteRef = CE96259923C473530098F5E9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		CEDBA6542343B23B00F6EC44 /* R2Navigator.framework */ = {
@@ -1363,7 +1423,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 		FD8535B01FF81716B2B34497 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2088,8 +2148,11 @@
 				);
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "r2-testapp-swift/r2-testapp-swift-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2121,8 +2184,11 @@
 				);
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "r2-testapp-swift/r2-testapp-swift-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
